@@ -1,16 +1,13 @@
 doctype html
 
 html
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js")
   header
     title Something
-
-  body(ng-app)
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    script(src="/javascripts/script.js")
+  body(ng-app='quotesApp' ng-controller='MainCtrl')
     block content
 
     footer
-      | {{3+3}}
       .footer Copyright 2015, who cares
-      
-    

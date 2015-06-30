@@ -1,5 +1,10 @@
 extend codinghouse
 
 block content
-  h1
-    | This is the index
+  form(ng-submit = "addQuote()")
+    input(placeholder='Write quote here', name='quote' ng-model="newQuote")
+    button(type='submit') Add Quote
+    .error{{formError}}
+  ul
+    li(ng-repeat="quote in quotes | filter: '' track by $index" ng-click="deleteQuote($index)") {{quote}}
+    
