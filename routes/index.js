@@ -8,6 +8,9 @@ router.get('/data/:id', function(req, res) {
   var data = require("../data.json");
   res.send(data.quotes[+req.params.id - 1]);
 });
+router.get('/', function(req, res) {
+  res.render("codinghouse");
+});
 
 router.get('/data', function(req, res) {
   res.send("Got it!\n");
